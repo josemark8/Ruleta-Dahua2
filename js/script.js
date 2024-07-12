@@ -30,9 +30,16 @@ function girar(){
 function premio(premios){
 
   document.querySelector('.elije').innerHTML = 'TU PREMIO ES: ' + premios;
-
+  if (premio = "VUELVE INTENTAR") {
+    var sonido = document.querySelector('#audio');
+    sonido.setAttribute('src', 'sonido/mario-kart-perdiste-perder-loser.mp3');
+  }else{
+    if (premio = "CANGURO","CHAQUETA","CAMISA","PORTA-H"){
+      var sonido = document.querySelector('#audio');
+    sonido.setAttribute('src', 'sonido/bites-ta-da-winner.mp3');
 }
-
+}
+}
 
  function calcular(rand) {
 
@@ -46,29 +53,29 @@ function premio(premios){
      premio("CANGURO");
      break;
      case valor > 45 && valor <= 90:
-     premio("PERDISTE");
+     premio("VUELVE INTENTAR");
      break;
      case valor > 90 && valor <= 135:
-     premio("CHAQUETA"); 
+     premio("BONO SODEXHOPASS"); 
      break; 
      case valor > 135 && valor <= 180:
-     premio("PERDISTE");
+     premio("VUELVE INTENTAR");
      break;
      case valor > 180 && valor <= 225:
-     premio("CAMISA");
+     premio("BONO SODEXHOPASS");
      break; 
      case valor > 225 && valor <= 270:
-     premio("PERDISTE");
+     premio("VUELVE INTENTAR");
      break;
      case valor > 270 && valor <= 315:
      premio("PORTA-H");
      break;
      case valor > 315 && valor <= 360:
-     premio("PERDISTE"); 
+     premio("VUELVE INTENTAR"); 
      break;
   }
 
  }, 5000);
-
+ 
 }
 }
